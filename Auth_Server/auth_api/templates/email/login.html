@@ -1,0 +1,80 @@
+{% load static %}
+<!DOCTYPE html>
+<head>
+  <meta charset="UTF-8" />
+  <title>OAuth 2.0 PAGE IAA</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}" />
+</head>
+<body>
+  <div class="container" >
+    <a class="links" id="paracadastro"></a>
+    <a class="links" id="paralogin"></a>
+     
+    <div class="content">      
+      <!--FORMULÁRIO DE LOGIN-->
+      <div id="login">
+        <div class ="ualogo">
+        </div>
+        <form method="POST" action="{% url 'login' %}"> 
+            {% csrf_token %}
+          <h1>User Autantication OAuth 2.0 IAA</h1> 
+          <p> 
+    
+            <label for="nome_login">Utilizador </label>
+            <input id="nome_login" name="nome_login" required="required" type="text" placeholder="ex. username ou email@ua.pt"/>
+          </p>
+           
+          <p> 
+            <label for="email_login">Palavra-passe</label>
+            <input id="email_login" name="email_login" required="required" type="password" placeholder="ex. senha" /> 
+          </p>
+           
+          <p> 
+            <input type="submit" value="Autenticar" /> 
+          </p>
+           
+          <p class="link">
+            Ainda não tem conta?
+            <a href="#pararegistrar">Cadastre-se</a>
+          </p>
+        </form>
+      </div>
+ 
+      <!--FORMULÁRIO DE CADASTRO-->
+      <div id="cadastro">
+        <div class = "ualogo">
+        </div>
+        <form action="{% url 'register' %}" method="POST"> 
+            {% csrf_token %}
+          <h1>Registar User</h1> 
+           
+          <p> 
+            <label for="nome_cad">Utilizador</label>
+            <input id="nome_cad" name="nome_cad" required="required" type="text" placeholder="ex. seu nome" />
+          </p>
+           
+          <p> 
+            <label for="email_cad">E-mail</label>
+            <input id="email_cad" name="email_cad" required="required" type="email" placeholder="ex. seuemail@ua.pt"/> 
+          </p>
+           
+          <p> 
+            <label for="senha_cad">Palavra-passe</label>
+            <input id="senha_cad" name="senha_cad" required="required" type="password" placeholder="ex. 1234"/>
+          </p>
+           
+          <p> 
+            <input type="submit" value="Registar"/> 
+          </p>
+           
+          <p class="link">  
+            Já tem conta?
+            <a href="#loginautentication"> Ir para Login </a>
+          </p>
+        </form>
+      </div>
+    </div>
+  </div>  
+</body>
+</html>
