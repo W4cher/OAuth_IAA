@@ -107,7 +107,7 @@ class CustomLoginView(generics.CreateAPIView):
         if '@' in username:
             user = EmailAuthBackend.authenticate(self, request, username=username, password=password)
         else:
-            user = authenticate(username = username, password=password)
+            user = authenticate(request=request, username = username, password=password)
          
         
         if user:

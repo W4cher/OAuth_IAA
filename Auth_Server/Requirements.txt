@@ -1,9 +1,12 @@
 asgiref==3.8.1
 Django==5.0.4
 django-activity-stream==2.0.0
+django-axes==6.4.0
+django-ipware==7.0.1
 django-rest-framework==0.1.0
 djangorestframework==3.15.1
 djangorestframework-simplejwt==5.3.1
 PyJWT==2.8.0
+python-ipware==3.0.0
 sqlparse==0.5.0
 tzdata==2024.1

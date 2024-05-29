@@ -22,12 +22,12 @@
           <p> 
     
             <label for="nome_login">Utilizador </label>
-            <input id="nome_login" name="nome_login" required="required" type="text" placeholder="ex. username ou email@ua.pt"/>
+            <input id="nome_login" name="username" required="required" type="text" placeholder="ex. username ou email@ua.pt"/>
           </p>
            
           <p> 
             <label for="email_login">Palavra-passe</label>
-            <input id="email_login" name="email_login" required="required" type="password" placeholder="ex. senha" /> 
+            <input id="email_login" name="password" required="required" type="password" placeholder="ex. senha" /> 
           </p>
            
           <p> 
@@ -36,7 +36,7 @@
            
           <p class="link">
             Ainda não tem conta?
-            <a href="#pararegistrar">Cadastre-se</a>
+            <a href="#paracadastro">Cadastre-se</a>
           </p>
         </form>
       </div>
@@ -51,17 +51,18 @@
            
           <p> 
             <label for="nome_cad">Utilizador</label>
-            <input id="nome_cad" name="nome_cad" required="required" type="text" placeholder="ex. seu nome" />
+            <input id="nome_cad" name="username" required="required" type="text" placeholder="ex. seu nome" />
           </p>
            
           <p> 
             <label for="email_cad">E-mail</label>
-            <input id="email_cad" name="email_cad" required="required" type="email" placeholder="ex. seuemail@ua.pt"/> 
+            <input id="email_cad" name="email" required="required" type="email" placeholder="ex. seuemail@ua.pt"/> 
           </p>
            
           <p> 
             <label for="senha_cad">Palavra-passe</label>
-            <input id="senha_cad" name="senha_cad" required="required" type="password" placeholder="ex. 1234"/>
+            <input id="senha_cad" name="password" required="required" type="password" placeholder="ex. 1234"/>
+            <input id="senha_cad" name="role" value="user" type="hidden" placeholder="ex. senha"/>
           </p>
            
           <p> 
@@ -70,7 +71,7 @@
            
           <p class="link">  
             Já tem conta?
-            <a href="#loginautentication"> Ir para Login </a>
+            <a href="#paralogin"> Ir para Login </a>
           </p>
         </form>
       </div>
