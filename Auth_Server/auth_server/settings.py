@@ -47,6 +47,9 @@ INSTALLED_APPS = [
     'axes',
     
     'auth_api',
+
+    'django_otp',
+    'django_otp.plugins.otp_totp',
     
 ]
 
@@ -59,6 +62,7 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 
+    'django_otp.middleware.OTPMiddleware',
     'axes.middleware.AxesMiddleware',
 ]
 
@@ -170,7 +174,8 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+# TIME_ZONE = 'UTC'
+TIME_ZONE = 'Portugal'
 
 USE_I18N = True
 
